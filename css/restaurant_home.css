@@ -585,5 +585,8 @@ position:fixed;
     display: block;
 }
 
-
-
+.border
+{
+  border: solid;
+  background-color: #00FA9A;
+}

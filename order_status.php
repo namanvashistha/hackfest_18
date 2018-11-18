@@ -48,7 +48,8 @@
                             <br>Address: <?php echo $row['address']; ?>
                             <br>Rider: <?php echo $row['rider']; ?>
                             <br>Instance: <?php echo $row['instance']; ?>
-                            <br>Status: <?php echo $row['status']; ?><br> 
+                            <br>Status: <?php echo $row['status']; ?>
+                            <br>OTP: <?php if($row['status']=="On the way") echo $row['otp']; ?><br> 
                         </div>
                     </div>
                 </div>  

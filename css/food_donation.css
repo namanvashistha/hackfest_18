@@ -41,7 +41,7 @@ input[type=text], input[type=password] {
 
 
 button {
-    background-color: #4CAF50;
+    background-color: #00FA9A;
     color: 	black;
     padding: 14px 20px;
     margin: 4px 0;
@@ -155,5 +155,13 @@ span.psw {
 	color: 	#800000;
 
 
+}
+.border{
+  border-style: solid;
+  width: 40%;
+  background-color: #C0C0C0;
+}
+.border:hover{
+ background-color: #00FA9A;
 }
 
