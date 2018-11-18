@@ -6,16 +6,17 @@
 	$items=$_POST['items'];
 	$total=$_POST['total'];
 	$address=$_POST['address'];
+	$otp=$_POST['otp'];
 	$q_rdr="SELECT email from riders where status='Online' and streak IN(SELECT MIN(streak) FROM riders WHERE status='Online' ); ";
 	$q1_rdr=mysqli_query($con,$q_rdr);
 	$row_rdr=mysqli_fetch_array($q1_rdr);
 	$rider=$row_rdr['email'];
 	if($rider=="") 
-		$q="INSERT INTO `orders` (`order_from` , `order_by`,`rider`,`items` ,`total`, `address`,`rider_status`) VALUES
-		('$order_from','$order_by','Not Alloted (Refresh Page)','$items','$total','$address','not allotted');";
+		$q="INSERT INTO `orders` (`order_from` , `order_by`,`rider`,`items` ,`total`, `address`,`rider_status`,`otp`) VALUES
+		('$order_from','$order_by','Not Alloted (Refresh Page)','$items','$total','$address','not allotted','$otp');";
 	else
-		$q="INSERT INTO `orders` (`order_from` , `order_by`,`rider`,`items` ,`total`, `address`) VALUES
-		('$order_from','$order_by','$rider','$items','$total','$address');";
+		$q="INSERT INTO `orders` (`order_from` , `order_by`,`rider`,`items` ,`total`, `address`,`otp`) VALUES
+		('$order_from','$order_by','$rider','$items','$total','$address','$otp');";
 	mysqli_query($con,$q);
 	
 	
