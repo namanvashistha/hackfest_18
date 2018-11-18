@@ -136,6 +136,7 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
   		<div class="copy">&copy; foodly</div>
   		<a style="float:right;" href="">About Us</a>
   		<a style="float:right;" href="">FAQs</a>
+  		<a style="float:right;" href="food_donation.php">FOOD DONATION</a>
   	</div>
   	<script src="js/index.js"></script>
 </body>
