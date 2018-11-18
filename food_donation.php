@@ -69,7 +69,7 @@ if(isset($_POST['update'])){
     while($k=mysqli_fetch_array($query))
 
     {?><div class="border">
-     <?php echo "Restaurant : ".$k['restaurant']."<br>Item Name : ".$k['item_name']."<br>Item Quantity : ".$k['item_quan']."<br>Instance : ".$k['instance']."<br>";?>
+     <?php echo "Restaurant : ".$k['restaurant']."<br>Item Name : ".$k['item_name']."<br>Item Quantity : ".$k['item_quan']."<br>Phone : ".$k['phone']."<br>Instance : ".$k['instance']."<br>";?>
     </div><br><?php }
   ?></div>
 
