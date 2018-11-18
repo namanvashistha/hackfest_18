@@ -14,9 +14,7 @@ if(isset($_POST['update'])){
   header('location:food_donation.php');
 }
 ?>
-<?php
-  include 'scrap.php';
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,3 +58,6 @@ if(isset($_POST['update'])){
 <script src="js/food_donation.js"></script>
 </body>
 </html>
+<?php
+  include 'scrap.php';
+?>
