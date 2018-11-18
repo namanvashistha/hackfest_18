@@ -49,7 +49,8 @@
                             <br>Rider: <?php echo $row['rider']; ?>
                             <br>Instance: <?php echo $row['instance']; ?>
                             <br>Status: <?php echo $row['status']; ?>
-                            <br>OTP: <?php if($row['status']=="On the way") echo $row['otp']; ?><br> 
+                            <br>OTP: <?php if($row['status']=="On the way") echo $row['otp'];
+                                            else echo "will be available soon"; ?><br> 
                         </div>
                     </div>
                 </div>  
