@@ -23,8 +23,7 @@
 	$q_rdr="UPDATE orders set rider_status='pending' rider =(SELECT MAX(email) from riders where status='Online' and streak IN(SELECT MIN(streak) FROM riders WHERE status='Online' ) ) where rider_status='not allotted' ; ";
 	mysqli_query($con,$q_rdr);
 
-
-
+/*
 
         $q="SELECT * from orders where order_by='$log_email' ORDER BY order_id desc;";
         $q1=mysqli_query($con,$q);
@@ -40,5 +39,5 @@
 			$row_itm=mysqli_fetch_array($q1_itm);
 			//updating in recommend table
 			echo "<div>&nbsp;&nbsp;".$row_itm['name']." &times; ".$item_list[$i+1]."</div>";
-        }
+        }*/
 ?>
