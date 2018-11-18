@@ -3,6 +3,7 @@
 <head>
 	<title>Food Donation</title>
 	<link rel="stylesheet" type="text/css" href="css/food_donation.css">
+	 <link rel="shortcut icon" href="images/logo.png" type="image/png">
 </head>
 <body>
  <div class="topnav">
@@ -12,26 +13,16 @@
   
   <form class="modal-content animate" action="/action_page.php">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
     </div>
-
+<div class="heading"><h2>List the items with their respective quantity</h2></div>
     <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <label for="uname"><b>Restaurant Name</b></label>
+      <input type="text" name="uname" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+ 
         
-      <button type="submit">Click for donation</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-
+     <button type="submit"><b>DONATE</b></button><button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><b>CANCEL</b></button>
+     
     </div>
   </form>
 </div>
