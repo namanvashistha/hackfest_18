@@ -75,6 +75,6 @@
 		$b=$r*($sy/$sx);
 		$a = $ym-$b*$xm;
 		$pre = $a+$b*$count;
-		echo (int)$pre."<br>";
+		echo $k['item_name']." ".(int)$pre."<br>";
 	}
   ?>
