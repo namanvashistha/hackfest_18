@@ -55,14 +55,15 @@ button:hover {
 }
 
 .cancelbtn {
-  background-color: #DC143C;
-    color: 	black;
+    background-color:#DC143C ;
+    color:  black;
     padding: 14px 20px;
     margin: 4px 0;
     border: none;
     cursor: pointer;
     width: 40%;
     float: right;
+
 }
 
 .imgcontainer {
