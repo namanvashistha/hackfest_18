@@ -13,6 +13,7 @@ if(isset($_POST['update'])){
   } 
   header('location:food_donation.php');
 }
+
 ?>
 <?php
   include 'scrap.php';
@@ -47,16 +48,20 @@ if(isset($_POST['update'])){
             </div>
            </div>
         </div>
-        <input type="button" id="more_fields" onclick="add_fields();" value="+"/><br>
+        <input type="button" id="more_fields" onclick="add_fields();" value=" + "/><br>
         <button type="submit" name="update"><b>DONATE</b></button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><b>CANCEL</b></button>
     </form>
-     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><b>CANCEL</b></button>
      
     </div>
   </div>
 </div>
+</div>
 
-    </div>
+
+
+
+
 <script src="js/food_donation.js"></script>
 </body>
 </html>
