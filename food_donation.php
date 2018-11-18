@@ -67,7 +67,7 @@ if(isset($_POST['update'])){
     $query = mysqli_query($con,$sql);
     while($k=mysqli_fetch_array($query))
     {
-      echo $k['restaurant']." ".$k['item_name']." ".$k['item_quan']." ".$k['instance']."<br>";
+      echo $k['restaurant']." ".$k['item_name']." ".$k['item_quan']." ".$k['phone']."<br>";
     }
   ?>
 <script src="js/food_donation.js"></script>
