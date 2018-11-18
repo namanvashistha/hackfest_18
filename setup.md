@@ -88,7 +88,7 @@ CREATE TABLE `stats` (
   `coordinates` varchar(30) DEFAULT NULL,
   `city` varchar(30) DEFAULT NULL,
   `instance` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `status` varchar(15) NOT NULL  DEFAULT 'visited',
+  `status` varchar(15) NOT NULL  DEFAULT 'visited'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `recommend` (
