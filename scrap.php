@@ -26,9 +26,12 @@ if(!empty($html)){//check whether the html is returned or not
 }
 
 section {
+	position: fixed;
+	right: 0px;
   display: block;
-  margin: 3rem auto;
-  width: 50%;
+  float: right;
+  width: 30%;
+  top: 20%;
   font-family: monospace;
   color: #555;
 }

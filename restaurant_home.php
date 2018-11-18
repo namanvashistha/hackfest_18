@@ -142,6 +142,7 @@ if(isset($_POST['update'])){
     </div>
 
     <div id="recommend">
+        RECOMMENDED MAKING:
         <?php
     $res = $restaurant_log_email;
     date_default_timezone_set('Asia/Kolkata');
