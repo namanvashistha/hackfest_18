@@ -148,6 +148,7 @@ if(isset($_POST['update'])){
     date_default_timezone_set('Asia/Kolkata');
     $a=date("h");
     $a=(int)$a;
+    
     $part;
     if($a>7 && $a<15)
     {
