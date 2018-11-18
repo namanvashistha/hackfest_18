@@ -71,7 +71,7 @@ table thead, table tbody tr {
 <table >
     <thead>
         <tr>
-            <td>Some Suggestion to donate food</td>
+            <td>Recent news about food requirements</td>
            
         </tr>
     </thead>

@@ -27,7 +27,9 @@ if(isset($_POST['update'])){
 <body>
  <div class="topnav">
         <img src="images/header_logo.jpeg" height= "45px" width = "110px" align="left">
+          <a href="index.php">Go back</a>
         <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add food</a>
+
         <div id="id01" class="modal">
   
   <div class="modal-content animate">
