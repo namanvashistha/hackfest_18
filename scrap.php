@@ -9,7 +9,79 @@ if(!empty($html)){//check whether the html is returned or not
 	$link_xpath = new DOMXPath($link);            
     	$percent=$link_xpath->query('//div[@id="content"]/div[@class="region region-content"]/div[@class="river-list river-updates river-sort-latest"]/div[@class="item "]/div[@class="title"]');
     	//print_r($percent);
-		            	foreach($percent as $r){
-                echo $r->nodeValue."<br>";}       
+		            	  
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: block;
+  margin: 3rem auto;
+  width: 50%;
+  font-family: monospace;
+  color: #555;
+}
+
+.title {
+  text-align: center;
+  padding: 2rem;
+}
+
+table {
+  width: 100%;
+}
+table thead {
+  background-color: #e4e4e4;
+}
+table td {
+  padding: 15px;
+}
+table tbody {
+  display: block;
+  max-height: 160px;
+  overflow-y: auto;
+}
+table tbody td {
+  border-bottom: 1px solid #eaeaea;
+}
+table thead, table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+	</style>
+</head>
+<body>
+<section>
+<table >
+    <thead>
+        <tr>
+            <td>Some Suggestion to donate food</td>
+           
+        </tr>
+    </thead>
+    <tbody>
+    	<?php
+       foreach($percent as $r){
+               echo "<tr>";
+                echo "<td>".$r->nodeValue."</tr>";
+            echo "</tr>";
+            }    
+            ?> 
+    </tbody>
+</table>
+</section>
+</body>
+</html>
