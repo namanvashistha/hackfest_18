@@ -33,7 +33,7 @@ if(isset($_POST['update'])){
   <div class="modal-content animate">
     <div class="imgcontainer">
     </div>
-<div class="heading"><h2>List the items with their respective quantity</h2></div>
+<div class="heading"><h2><center>List the items with their respective quantity</center></h2></div>
     <div class="container">
       <form method="post" >
         <label for="uname"><b>Restaurant Name</b></label>
@@ -49,8 +49,9 @@ if(isset($_POST['update'])){
         </div>
         <input type="button" id="more_fields" onclick="add_fields();" value="+"/><br>
         <button type="submit" name="update"><b>DONATE</b></button>
+         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><b>CANCEL</b></button>
     </form>
-     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><b>CANCEL</b></button>
+    
      
     </div>
   </div>
