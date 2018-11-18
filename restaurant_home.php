@@ -240,14 +240,15 @@ if(isset($_POST['update'])){
        	<input type="submit" name="update" value="Update">
     </form>
 
-    <div>
+    <div class="border">
     	<table>
     	<?php
     	$q="SELECT * FROM menu where restaurant_id='$restaurant_log_email'; ";
 		$q1=mysqli_query($con,$q);
 		$rowcount=mysqli_num_rows($q1);
 		if ($rowcount>0) {
-    	?>	
+    	?>
+
     	<tr><td><b>name</b></td><td><b>price</b></td><td><b>discount</b></td><td><b>description</b></td></tr></pre>
     	<?php
     			while ($row=mysqli_fetch_array($q1)) {
@@ -264,6 +265,7 @@ if(isset($_POST['update'])){
     	?>
     	</table>
     </div>
+    <br>
  
 
         <div class="navbar">
