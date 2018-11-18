@@ -1,3 +1,4 @@
+
 <?php
 include "connection.php";
 if(isset($_POST['update'])){
@@ -13,6 +14,9 @@ if(isset($_POST['update'])){
   header('location:food_donation.php');
 }
 ?>
+<?php
+  include 'scrap.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +30,7 @@ if(isset($_POST['update'])){
         <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add food</a>
         <div id="id01" class="modal">
   
-  <div class="modal-content animate" action="/action_page.php">
+  <div class="modal-content animate">
     <div class="imgcontainer">
     </div>
 <div class="heading"><h2>List the items with their respective quantity</h2></div>
