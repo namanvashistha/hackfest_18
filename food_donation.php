@@ -58,18 +58,19 @@ if(isset($_POST['update'])){
   </div>
 </div>
 
-    </div>
+    </div><br>
+    <div class="card">
     <?php
     $sql = "SELECT * FROM `donate` WHERE 1;";
     $query = mysqli_query($con,$sql);
     while($k=mysqli_fetch_array($query))
-    {
-      echo $k['restaurant']." ".$k['item_name']." ".$k['item_quan']." ".$k['instance']."<br>";
-    }
-  ?>
+    {?><div class="border">
+     <?php echo "Restaurant : ".$k['restaurant']."<br>Item Name : ".$k['item_name']."<br>Item Quantity : ".$k['item_quan']."<br>Instance : ".$k['instance']."<br>";?>
+    </div><br><?php }
+  ?></div>
 <script src="js/food_donation.js"></script>
 </body>
 </html>
 <?php
-  include 'scrap.php';
+//  include 'scrap.php';
 ?>

@@ -156,4 +156,9 @@ span.psw {
 
 
 }
+.border{
+  border-style: solid;
+  width: 40%;
+  background-color: #C0C0C0;
+}
 
