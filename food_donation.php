@@ -23,6 +23,7 @@ if(isset($_POST['update'])){
 	 <link rel="shortcut icon" href="images/logo.png" type="image/png">
 </head>
 <body>
+
  <div class="topnav">
         <img src="images/header_logo.jpeg" height= "45px" width = "110px" align="left">
           <a href="index.php">Go back</a>
@@ -57,6 +58,14 @@ if(isset($_POST['update'])){
 </div>
 
     </div>
+    <?php
+    $sql = "SELECT * FROM `donate` WHERE 1;";
+    $query = mysqli_query($con,$sql);
+    while($k=mysqli_fetch_array($query))
+    {
+      echo $k['restaurant']." ".$k['item_name']." ".$k['item_quan']." ".$k['instance'];
+    }
+  ?>
 <script src="js/food_donation.js"></script>
 </body>
 </html>
