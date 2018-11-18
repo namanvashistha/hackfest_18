@@ -106,5 +106,6 @@ CREATE TABLE `donate` (
   `restaurant` varchar(30) NOT NULL,
   `item_name` varchar(30) NOT NULL,
   `item_quan` varchar(30) NOT NULL,
-  `instance` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `instance` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `phone` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

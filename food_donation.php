@@ -4,11 +4,12 @@ include "connection.php";
 if(isset($_POST['update'])){
   $item_name=$_POST['item_name'];
   $item_quan=$_POST['item_quan'];
+  $ph = $_POST['phone'];
   $res=$_POST['res'];
   for($i=0;$i<sizeof($item_name);$i++){
     if(empty($item_name[$i]) || empty($item_quan[$i])) 
             continue;
-    $q="INSERT INTO donate(`restaurant`,`item_name`,`item_quan`) VALUES ('$res','$item_name[$i]', '$item_quan[$i]');";
+    $q="INSERT INTO donate(`restaurant`,`item_name`,`item_quan`,`phone`) VALUES ('$res','$item_name[$i]', '$item_quan[$i]','$ph');";
     mysqli_query($con,$q);
   } 
   header('location:food_donation.php');
@@ -37,8 +38,10 @@ if(isset($_POST['update'])){
 <div class="heading"><h2><center>List the items with their respective quantity</center></h2></div>
     <div class="container">
       <form method="post" >
-        <label for="uname"><b>Restaurant Name</b></label>
+        <label for="res"><b>Restaurant Name</b></label>
       <input type="text" name="res" required>
+       <label for="phone"><b>Phone</b></label>
+      <input type="text" name="phone" required>
        <div id="item_fileds">
            <div>
             <div class='label'>Item 1:</div>
@@ -64,10 +67,12 @@ if(isset($_POST['update'])){
     $sql = "SELECT * FROM `donate` WHERE 1;";
     $query = mysqli_query($con,$sql);
     while($k=mysqli_fetch_array($query))
+
     {?><div class="border">
      <?php echo "Restaurant : ".$k['restaurant']."<br>Item Name : ".$k['item_name']."<br>Item Quantity : ".$k['item_quan']."<br>Instance : ".$k['instance']."<br>";?>
     </div><br><?php }
   ?></div>
+
 <script src="js/food_donation.js"></script>
 </body>
 </html>
