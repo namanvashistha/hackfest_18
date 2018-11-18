@@ -66,7 +66,6 @@ CREATE TABLE `orders` (
   `total` float(20) NOT NULL,
   `instance` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `address` varchar(100) NOT NULL,
-  `otp` int(5) NOT NULL,
   `status` varchar(30) NOT NULL DEFAULT 'placed',
   PRIMARY KEY (`order_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -87,16 +86,5 @@ CREATE TABLE `stats` (
   `ip_address` varchar(30) NOT NULL,
   `coordinates` varchar(30) DEFAULT NULL,
   `city` varchar(30) DEFAULT NULL,
-  `instance` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `status` varchar(15) NOT NULL  DEFAULT 'visited'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-CREATE TABLE `recommend` (
-  `res_name` varchar(500) NOT NULL,
-  `item_name` varchar(500) NOT NULL,
-  `date` date NOT NULL,
-  `first` int(20) NOT NULL,
-  `second` int(20) NOT NULL,
-  `third` int(20) NOT NULL,
-  `fourth` int(20) NOT NULL
+  `instance` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

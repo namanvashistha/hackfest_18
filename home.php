@@ -106,7 +106,7 @@ $q1=mysqli_query($con,$q);
 			$.ajax({
 				url:"send_msg.php",
 				method:"POST",
-				data:{msg:send_msg},
+				data:{msg:send_msg,client:"user"},
 				dataType:"text",
 				success:function(data){
 					$('#send_msg').val("");
@@ -120,6 +120,6 @@ $q1=mysqli_query($con,$q);
 });
 </script>
 <script src="js/home.js" type="text/javascript"></script>
-
+</script>
 </body>
 </html>
