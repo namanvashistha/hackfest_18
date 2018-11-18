@@ -1,11 +1,13 @@
 <?php
+include "connection.php";
 if(isset($_POST['update'])){
   $item_name=$_POST['item_name'];
   $item_quan=$_POST['item_quan'];
+  $res=$_POST['res'];
   for($i=0;$i<sizeof($item_name);$i++){
-    if(empty($item_name[$i]) || empty($item_price[$i])) 
+    if(empty($item_name[$i]) || empty($item_quan[$i])) 
             continue;
-    $q="INSERT INTO donate(`restaurant_id`,`item_name`,`item_quan`) VALUES ('$restaurant_log_email','$item_name[$i]', '$item_quan[$i]');";
+    $q="INSERT INTO donate(`restaurant`,`item_name`,`item_quan`) VALUES ('$res','$item_name[$i]', '$item_quan[$i]');";
     mysqli_query($con,$q);
   } 
   header('location:food_donation.php');
@@ -24,14 +26,14 @@ if(isset($_POST['update'])){
         <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add food</a>
         <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="/action_page.php">
+  <div class="modal-content animate" action="/action_page.php">
     <div class="imgcontainer">
     </div>
 <div class="heading"><h2>List the items with their respective quantity</h2></div>
     <div class="container">
-      <label for="uname"><b>Restaurant Name</b></label>
-      <input type="text" name="uname" required>
       <form method="post" >
+        <label for="uname"><b>Restaurant Name</b></label>
+      <input type="text" name="res" required>
        <div id="item_fileds">
            <div>
             <div class='label'>Item 1:</div>
@@ -47,7 +49,7 @@ if(isset($_POST['update'])){
      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><b>CANCEL</b></button>
      
     </div>
-  </form>
+  </div>
 </div>
 
     </div>
