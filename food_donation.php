@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +12,7 @@
         <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add food</a>
         <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="/action_page.php">
+  <form class="modal-content animate" method="post">
     <div class="imgcontainer">
     </div>
 <div class="heading"><h2>List the items with their respective quantity</h2></div>
