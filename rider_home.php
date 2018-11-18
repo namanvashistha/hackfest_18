@@ -98,7 +98,7 @@ $error="";
                         $q_itm="SELECT name FROM menu where sno='$item_list[$i]' and restaurant_id='$order_from' ;";
                         $q1_itm=mysqli_query($con,$q_itm);
                         $row_itm=mysqli_fetch_array($q1_itm);
-                        echo "<div>&nbsp;&nbsp;".$row_itm['name']." X ".$item_list[$i+1]."</div>";
+                        echo "<div>&nbsp;&nbsp;".$row_itm['name']." &times; ".$item_list[$i+1]."</div>";
                     }
                     ?>
                     total:<?php echo $row['total']; ?>
@@ -144,7 +144,7 @@ $error="";
                         $q_itm="SELECT name FROM menu where sno='$item_list[$i]' and restaurant_id='$order_from' ;";
                         $q1_itm=mysqli_query($con,$q_itm);
                         $row_itm=mysqli_fetch_array($q1_itm);
-                        echo "<div>&nbsp;&nbsp;".$row_itm['name']." X ".$item_list[$i+1]."</div>";
+                        echo "<div>&nbsp;&nbsp;".$row_itm['name']." &times; ".$item_list[$i+1]."</div>";
                     }
                     ?>
                     total:<?php echo $row['total']; ?>

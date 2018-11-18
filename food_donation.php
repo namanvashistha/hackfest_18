@@ -1,4 +1,20 @@
 
+<?php
+if(isset($_POST['update'])){
+  $item_name=$_POST['item_name'];
+  $item_quan=$_POST['item_quan'];
+  for($i=0;$i<sizeof($item_name);$i++){
+    if(empty($item_name[$i]) || empty($item_price[$i])) 
+            continue;
+    $q="INSERT INTO donate(`restaurant_id`,`item_name`,`item_quan`) VALUES ('$restaurant_log_email','$item_name[$i]', '$item_quan[$i]');";
+    mysqli_query($con,$q);
+  } 
+  header('location:food_donation.php');
+}
+?>
+<?php
+  include 'scrap.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,10 +35,20 @@
     <div class="container">
       <label for="uname"><b>Restaurant Name</b></label>
       <input type="text" name="uname" required>
-
- 
-        
-     <button type="submit"><b>DONATE</b></button><button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><b>CANCEL</b></button>
+      <form method="post" >
+       <div id="item_fileds">
+           <div>
+            <div class='label'>Item 1:</div>
+            <div class="content">
+                <span>item name:<input type="text" name="item_name[]" /></span>
+                <span>quantity: <input type="text" name="item_quan[]" /></span>
+            </div>
+           </div>
+        </div>
+        <input type="button" id="more_fields" onclick="add_fields();" value="+"/><br>
+        <button type="submit" name="update"><b>DONATE</b></button>
+    </form>
+     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><b>CANCEL</b></button>
      
     </div>
   </form>

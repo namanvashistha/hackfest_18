@@ -17,6 +17,7 @@ Please read [CONTRIBUTING.md](https://github.com/namanvashistha/foodly/blob/mast
 
 - [@namanvashistha](https://github.com/namanvashistha) - **Naman Vashistha**, Maintainer and Developer
 - [@bhavyamendiratta](https://github.com/bhavyamendiratta) - **Bhavya Mendiratta**, Front-End Developer
+- [@hritikagg]((https://github.com/bhavyamendiratta)) - **Hritik Aggarwal**,maintainer and main developer
 
 ## License
 

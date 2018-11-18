@@ -75,7 +75,7 @@ $rdetails=mysqli_fetch_array($q1);
     </div>
 
     
-    <input id="delivery_address" type="text" name="address" placeholder="Enter delivery address" required>
+    <input id="coupon_code" type="text" name="coupon_code" placeholder="Enter coupon code" required><button id="coupon">Apply</button>
     <div>
         <div>
             subtotal = ₹<span id="subtotal">0</span>
