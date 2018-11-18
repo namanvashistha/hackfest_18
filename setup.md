@@ -91,3 +91,13 @@ CREATE TABLE `stats` (
   `instance` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 COMMIT;
+
+CREATE TABLE `recommend` (
+  `res_name` varchar(500) NOT NULL,
+  `item_name` varchar(500) NOT NULL,
+  `date` date NOT NULL,
+  `first` int(20) NOT NULL,
+  `second` int(20) NOT NULL,
+  `third` int(20) NOT NULL,
+  `fourth` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

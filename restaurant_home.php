@@ -18,8 +18,8 @@ if(isset($_POST['update'])){
             continue;
 		$q="INSERT INTO menu (`restaurant_id`,`name`,`price`,`discount`,`description`) VALUES ('$restaurant_log_email','$item_name[$i]', '$item_price[$i]','$item_discount[$i]','$item_desc[$i]');";
 		$q1=mysqli_query($con,$q);
-    	header('location:restaurant_home.php');
 	}	
+    header('location:restaurant_home.php');
 }
     if(isset($_POST['delete'])){
         $del_name=$_POST['del_name'];
@@ -89,7 +89,7 @@ if(isset($_POST['update'])){
                         $q_itm="SELECT name FROM menu where sno='$item_list[$i]' and restaurant_id='$restaurant_log_email'; ";
                         $q1_itm=mysqli_query($con,$q_itm);
                         $row_itm=mysqli_fetch_array($q1_itm);
-                        echo "<div>&nbsp;&nbsp;".$row_itm['name']." X ".$item_list[$i+1]."</div>";
+                        echo "<div>&nbsp;&nbsp;".$row_itm['name']." &times; ".$item_list[$i+1]."</div>";
                     }
                     ?>
                     total:<?php echo $row['total']; ?>
@@ -126,7 +126,7 @@ if(isset($_POST['update'])){
                         $q_itm="SELECT name FROM menu where sno='$item_list[$i]' and restaurant_id='$restaurant_log_email' ";
                         $q1_itm=mysqli_query($con,$q_itm);
                         $row_itm=mysqli_fetch_array($q1_itm);
-                        echo "<div>&nbsp;&nbsp;".$row_itm['name']." X ".$item_list[$i+1]."</div>";
+                        echo "<div>&nbsp;&nbsp;".$row_itm['name']." &times; ".$item_list[$i+1]."</div>";
                     }
                     ?>
                     total:<?php echo $row['total']; ?>
