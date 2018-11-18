@@ -101,3 +101,10 @@ CREATE TABLE `recommend` (
   `third` int(20) NOT NULL,
   `fourth` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `donate` (
+  `restaurant` varchar(30) NOT NULL,
+  `item_name` varchar(30) NOT NULL,
+  `item_quan` varchar(30) NOT NULL,
+  `instance` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
