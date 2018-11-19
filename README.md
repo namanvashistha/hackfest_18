@@ -17,7 +17,7 @@ Please read [CONTRIBUTING.md](https://github.com/namanvashistha/foodly/blob/mast
 
 - [@namanvashistha](https://github.com/namanvashistha) - **Naman Vashistha**
 - [@bhavyamendiratta](https://github.com/bhavyamendiratta) - **Bhavya Mendiratta** 
-- [@hritikagg](https://github.com/bhavyamendiratta) - **Hritik Aggarwal**
+- [@hritikagg](https://github.com/invincibel) - **Hritik Aggarwal**
 
 ## License
 
